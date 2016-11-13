@@ -1,16 +1,15 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: About this site and me
+
+og_title: ParoleOnline.It Author details
+og_description: Opensource software using Angularjs, ElasticSearch, SWI-Prolog as application/rest server, Nginx, Jekyll
+og_type: website
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is  Matteo Redaelli and I'm a big fan of OpenSource software. This site runs several Opensource softwares
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+I decided to switch from [Wordpress](http://www.wordpress.org) to a static generated web site using [Jekyll](https://jekyllrb.com/)
+after reading [this article](http://kylerush.net/blog/meet-the-obama-campaigns-250-million-fundraising-platform/) about Obama Campain web site...
 
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
