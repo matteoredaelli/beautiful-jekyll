@@ -23,7 +23,7 @@ description: Le parole italiane
 
 # List of links in the navigation bar
 navbar-links:
-  Ftasi: "frasi"
+  Frasi: "frasi"
   About Me: "aboutme"
 #  Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
