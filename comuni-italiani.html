@@ -1,0 +1,29 @@
+---
+layout: page
+title: Comuni italiani
+subtitle: Comuni italiani CAP, prefisso, codici istat
+
+og_title: Comuni italiani con CAP e prefisso
+og_description: Comuni italiani con CAP, prefissi, festa patronale
+og_type: website
+---
+
+<script src="/js/search_doctype.js"></script>
+
+<div ng-app="myApp" ng-controller="planetController">
+  <p><input ng-model="query" placeholder="comune o cap" type="text"></p>
+  <p><button ng-click="searchV('grafo', 'città', query)">Cerca comune italiano</button></p>
+  <p>Comuni trovati:</p>
+  <ul>
+    <li ng-repeat="doc in hits">
+      [[doc._source.name]]
+      <ul>
+        <li ng-repeat="(key,value) in doc._source">
+          [[key]]: [[value]]
+        </li>
+      </ul>
+    </li>
+  </ul>
+  
+ 
+</div>

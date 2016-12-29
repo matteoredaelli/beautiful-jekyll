@@ -24,6 +24,7 @@ description: Le parole italiane
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
+  Comuni italiani: "comuni-italiani"
   News: "news"
 #  Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
