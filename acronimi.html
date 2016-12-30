@@ -1,0 +1,30 @@
+---
+layout: page
+title: Acronimi
+subtitle: Acronimi italiani ed internazionali
+
+og_title:  acronyms
+og_description: acronyms, acronimi italiani
+og_type: website
+---
+
+<script src="/js/search_doctype.js"></script>
+
+<div ng-app="myApp" ng-controller="planetController">
+  <form ng-submit="searchV('grafo', 'acronimo', 'name:' + q)">
+    <input ng-model="q"    placeholder="acronimo" type="text" />
+  </form>
+  <div>
+    Acronimi trovati:
+    <ul ng-if="hits.length > 0">
+      <li ng-repeat="doc in hits">
+	[[doc._source.name]]
+	<ul>
+          <li ng-repeat="item in doc._source.meanings">
+            [[item]]
+          </li>
+	</ul>
+      </li>
+    </ul>
+  </div>
+</div>

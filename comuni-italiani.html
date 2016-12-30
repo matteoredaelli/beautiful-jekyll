@@ -11,19 +11,26 @@ og_type: website
 <script src="/js/search_doctype.js"></script>
 
 <div ng-app="myApp" ng-controller="planetController">
-  <p><input ng-model="query" placeholder="comune o cap" type="text"></p>
-  <p><button ng-click="searchV('grafo', 'città', query)">Cerca comune italiano</button></p>
-  <p>Comuni trovati:</p>
-  <ul>
-    <li ng-repeat="doc in hits">
-      [[doc._source.name]]
-      <ul>
-        <li ng-repeat="(key,value) in doc._source">
-          [[key]]: [[value]]
-        </li>
-      </ul>
-    </li>
-  </ul>
+  <form ng-submit="searchV('grafo', 'città', q)">
+    <input ng-model="q"   placeholder="città o cap" type="text" />
+    <!--
+    <input ng-model="idx" type="text" ng-value="grafo" style="display: none;" />
+    <input ng-model="typ" type="text" ng-value="città" style="display: none;" />
+-->
+  </form>
   
- 
+  <div>
+    Comuni trovati:
+    <ul ng-if="hits.length > 0">
+      <li ng-repeat="doc in hits">
+	[[doc._source.name]]
+	<ul>
+          <li ng-repeat="(key,value) in doc._source">
+            [[key]]: [[value]]
+          </li>
+	</ul>
+      </li>
+    </ul>
+  </div>
+  
 </div>
