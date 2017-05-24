@@ -11,7 +11,7 @@ app.config(['$httpProvider', function($httpProvider) {
 
 app.controller('planetController', function($scope, $http, $location) {
     $scope.searchV = function(query) {
-      var url = "http://paroleonline.it/ws/parola?parola=" + query;
+      var url = "https://paroleonline.it/ws/parola?parola=" + query;
       $http.get(url)
       	.then(function(response) {
             $scope.result = response.data.tipo;

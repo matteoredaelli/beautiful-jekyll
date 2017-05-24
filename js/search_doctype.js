@@ -12,7 +12,7 @@ app.config(['$httpProvider', function($httpProvider) {
 app.controller('planetController', function($scope, $http, $location) {
     $scope.q = $location.search().q;
     $scope.searchV = function(idx, typ, q) {
-      var url = "http://paroleonline.it/" + idx + "/" + typ + "/_search?size=100&q=" + q.substring(0,30);
+      var url = "https://paroleonline.it/" + idx + "/" + typ + "/_search?size=100&q=" + q.substring(0,30);
       $http.get(url)
       	.then(function(response) {
             $scope.hits = response.data.hits.hits;
