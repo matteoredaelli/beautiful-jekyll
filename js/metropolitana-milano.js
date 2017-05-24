@@ -22,6 +22,6 @@ app.controller('planetController', function($scope, $http, $location) {
     
     $scope.from = $location.search().from;
     $scope.to = $location.search().to;
-    searchV($scope.from, $scope.to);
+    //searchV($scope.from, $scope.to);
 			 
 });

@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Metropolitana Milano
-subtitle: Mobilità a Milano cerca pecorsi tra linee metropolitane di Atm e suburbane di Trenord
+title: Mobilità Milano
+subtitle: Ricerca percorsi tra linee metropolitane di Atm e suburbane di Trenord
 
-og_title:  Mezzi di trasporto milano metro e linee suburbane
+og_title:  Mezzi di trasporto milano metro M1 M2 M3 M5 e linee suburbane S1 S2 S3 S4 S5 S6 S7 S8 S9 S10 S11 S13
 og_description: cerca percorsi tra stazioni del metro a Milano e linee trenord
 og_type: website
 ---
@@ -12,16 +12,483 @@ og_type: website
 
 <div ng-app="myApp" ng-controller="planetController">
   <form ng-submit="searchV(from, to)">
-    <input ng-model="from"    placeholder="stazione di partenza" type="text" />
-    <input ng-model="to"    placeholder="stazione di arrivo" type="text" />
-    <input type="submit" id="submit" value="Cerca percorso" />
+
+<div class="form-group">
+  <label for="sel1">Stazione di partenza:</label>
+  <select class="form-control" id="from" ng-model="from">
+    <option>Affori</option>
+<option>Affori centro</option>
+<option>Affori FN</option>
+<option>Airuno</option>
+<option>Albairate - Vermezzo</option>
+<option>Albate Camerlata</option>
+<option>Albizzate</option>
+<option>Amendola Fiera</option>
+<option>Arcore</option>
+<option>Assago Milanofiori Forum</option>
+<option>Assago Milanofiori Nord</option>
+<option>Bande Nere</option>
+<option>Besana</option>
+<option>Biassono-Lesmo</option>
+<option>Bicocca</option>
+<option>Bignami</option>
+<option>Bisceglie</option>
+<option>Bollate Centro</option>
+<option>Bollate Nord</option>
+<option>Bonola</option>
+<option>Borgolombardo</option>
+<option>Bovisa</option>
+<option>Bovisa - Politecnico</option>
+<option>Bovisio Masciago</option>
+<option>Bovisio Masciago - Mombello</option>
+<option>Brenta</option>
+<option>Bruzzano</option>
+<option>Buonarroti</option>
+<option>Bussero</option>
+<option>Busto Arsizio</option>
+<option>Buttafava</option>
+<option>Cabiate</option>
+<option>Cadorna</option>
+<option>Cà Granda</option>
+<option>Caiazzo</option>
+<option>Cairoli</option>
+<option>Calolziocorte</option>
+<option>Camnago Lentate</option>
+<option>Canegrate</option>
+<option>Cantù Cermenate</option>
+<option>Carate-Calò</option>
+<option>Carimate</option>
+<option>Carnate-Usmate</option>
+<option>Caronno Pertusella</option>
+<option>Cascina Antonietta</option>
+<option>Cascina Burrona</option>
+<option>Cascina Gobba</option>
+<option>Cassago-Nibionno-Bulciago</option>
+<option>Cassano d\'Adda</option>
+<option>Cassina de\' Pecchi</option>
+<option>Castronno</option>
+<option>Cavaria Oggiona Jerago</option>
+<option>Cenisio</option>
+<option>Centrale</option>
+<option>Ceriano Laghetto-Groane</option>
+<option>Ceriano Laghetto-Solaro</option>
+<option>Cernusco</option>
+<option>Cernusco-Merate</option>
+<option>Certosa</option>
+<option>Certosa di Pavia</option>
+<option>Cesano Boscone</option>
+<option>Cesano Maderno</option>
+<option>Cesano Maderno-Groane</option>
+<option>Cesate</option>
+<option>Chiasso</option>
+<option>Cimiano</option>
+<option>Civate</option>
+<option>Cologno Centro</option>
+<option>Cologno Nord</option>
+<option>Cologno Sud</option>
+<option>Comasina</option>
+<option>Como San Giovanni</option>
+<option>Conciliazione</option>
+<option>Corbetta S. Stefano</option>
+<option>Cordusio</option>
+<option>Cormano-Cusano</option>
+<option>Corsico</option>
+<option>Corvetto</option>
+<option>Costa Masnaga</option>
+<option>Crescenzago</option>
+<option>Crocetta</option>
+<option>Cucciago</option>
+<option>Dateo</option>
+<option>De Angeli</option>
+<option>Dergano</option>
+<option>Desio</option>
+<option>Domodossola</option>
+<option>Domodossola FNM</option>
+<option>Duomo</option>
+<option>Famagosta</option>
+<option>Forlanini</option>
+<option>Gaggiano</option>
+<option>Gallarate</option>
+<option>Gambara</option>
+<option>Garbagnate - Groane</option>
+<option>Garbagnate Milanese</option>
+<option>Garbagnate Parco delle Groane</option>
+<option>Gazzada</option>
+<option>Gerusalemme</option>
+<option>Gessate</option>
+<option>Gioia</option>
+<option>Gorgonzola</option>
+<option>Gorla</option>
+<option>Greco Pirelli</option>
+<option>Inganni</option>
+<option>Isola</option>
+<option>Istria</option>
+<option>Lambrate</option>
+<option>Lampugnano</option>
+<option>Lancetti</option>
+<option>Lanza</option>
+<option>Lecco</option>
+<option>Lecco Maggianico</option>
+<option>Legnano</option>
+<option>Lima</option>
+<option>Lissone</option>
+<option>Locate Triulzi</option>
+<option>Lodi</option>
+<option>Lodi T.I.B.B. (P.ta Romana FS)</option>
+<option>Loreto</option>
+<option>Lotto</option>
+<option>Macherio-Canonica</option>
+<option>Maciachini</option>
+<option>Magenta</option>
+<option>Marche</option>
+<option>Mariano Comense</option>
+<option>Meda</option>
+<option>Melegnano</option>
+<option>Melzo</option>
+<option>Milano Centrale</option>
+<option>Missori</option>
+<option>Molino Dorino</option>
+<option>Molteno</option>
+<option>Montenapoleone</option>
+<option>Monumentale</option>
+<option>Monza</option>
+<option>Monza Sobborghi</option>
+<option>Moscova</option>
+<option>Novara</option>
+<option>Novate Milanese</option>
+<option>Oggiono</option>
+<option>Olgiate</option>
+<option>Osnago</option>
+<option>Paderno Dugnano</option>
+<option>Pagano</option>
+<option>Palazzolo Milanese</option>
+<option>Palestro</option>
+<option>Parabiago</option>
+<option>Pasteur</option>
+<option>Pavia</option>
+<option>Pero</option>
+<option>Piazza Abbiategrasso</option>
+<option>Pieve Emanuele</option>
+<option>Piola</option>
+<option>Pioltello</option>
+<option>Ponale</option>
+<option>Porta Garibaldi</option>
+<option>Porta Genova</option>
+<option>Porta Romana</option>
+<option>Porta Venezia</option>
+<option>Porta Vittoria</option>
+<option>Portello</option>
+<option>Porto di Mare</option>
+<option>Pozzuolo Martesana</option>
+<option>Precotto</option>
+<option>Pregnana Milanese</option>
+<option>Primaticcio</option>
+<option>QT8</option>
+<option>Quarto Oggiaro</option>
+<option>Renate-Veduggio</option>
+<option>Repubblica</option>
+<option>Rho</option>
+<option>Rho Fiera</option>
+<option>Rho FieraMilano</option>
+<option>Rogoredo</option>
+<option>Romolo</option>
+<option>Rovereto</option>
+<option>Sala al Barro-Galbiate</option>
+<option>San Babila</option>
+<option>San Cristoforo</option>
+<option>San Donato</option>
+<option>San Leonardo</option>
+<option>San Siro Ippodromo</option>
+<option>San Siro Stadio</option>
+<option>Sant\'Agostino</option>
+<option>Sant\'Ambrogio</option>
+<option>Saronno</option>
+<option>Saronno Sud</option>
+<option>S. Donato Milanese</option>
+<option>Segesta</option>
+<option>Segrate</option>
+<option>Seregno</option>
+<option>Sesto FS (I Maggio)</option>
+<option>Sesto Marelli</option>
+<option>Sesto Rondò</option>
+<option>Seveso</option>
+<option>Seveso Baruccana</option>
+<option>S. Giuliano Milanese</option>
+<option>Sondrio</option>
+<option>S. Zenone al Lambro</option>
+<option>Tavazzano</option>
+<option>Trecate</option>
+<option>Trecella</option>
+<option>Tre torri</option>
+<option>Treviglio</option>
+<option>Trezzano sul Naviglio</option>
+<option>Triuggio-Ponte Albiate</option>
+<option>Turati</option>
+<option>Turro</option>
+<option>Udine</option>
+<option>Uruguay</option>
+<option>Valmadrera</option>
+<option>Vanzago</option>
+<option>Varedo</option>
+<option>Varese</option>
+<option>Venezia</option>
+<option>Vignate</option>
+<option>Villa Fiorita</option>
+<option>Villamaggiore</option>
+<option>Villapizzone</option>
+<option>Villa Pompea</option>
+<option>Villa Raverio</option>
+<option>Villasanta</option>
+<option>Villa S. Giovanni</option>
+<option>Vimodrone</option>
+<option>Vittuone</option>
+<option>Wagner</option>
+<option>Zara</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="sel1">Stazione di arrivo:</label>
+  <select class="form-control" id="to" ng-model="to">
+    <option>Affori</option>
+<option>Affori centro</option>
+<option>Affori FN</option>
+<option>Airuno</option>
+<option>Albairate - Vermezzo</option>
+<option>Albate Camerlata</option>
+<option>Albizzate</option>
+<option>Amendola Fiera</option>
+<option>Arcore</option>
+<option>Assago Milanofiori Forum</option>
+<option>Assago Milanofiori Nord</option>
+<option>Bande Nere</option>
+<option>Besana</option>
+<option>Biassono-Lesmo</option>
+<option>Bicocca</option>
+<option>Bignami</option>
+<option>Bisceglie</option>
+<option>Bollate Centro</option>
+<option>Bollate Nord</option>
+<option>Bonola</option>
+<option>Borgolombardo</option>
+<option>Bovisa</option>
+<option>Bovisa - Politecnico</option>
+<option>Bovisio Masciago</option>
+<option>Bovisio Masciago - Mombello</option>
+<option>Brenta</option>
+<option>Bruzzano</option>
+<option>Buonarroti</option>
+<option>Bussero</option>
+<option>Busto Arsizio</option>
+<option>Buttafava</option>
+<option>Cabiate</option>
+<option>Cadorna</option>
+<option>Cà Granda</option>
+<option>Caiazzo</option>
+<option>Cairoli</option>
+<option>Calolziocorte</option>
+<option>Camnago Lentate</option>
+<option>Canegrate</option>
+<option>Cantù Cermenate</option>
+<option>Carate-Calò</option>
+<option>Carimate</option>
+<option>Carnate-Usmate</option>
+<option>Caronno Pertusella</option>
+<option>Cascina Antonietta</option>
+<option>Cascina Burrona</option>
+<option>Cascina Gobba</option>
+<option>Cassago-Nibionno-Bulciago</option>
+<option>Cassano d\'Adda</option>
+<option>Cassina de\' Pecchi</option>
+<option>Castronno</option>
+<option>Cavaria Oggiona Jerago</option>
+<option>Cenisio</option>
+<option>Centrale</option>
+<option>Ceriano Laghetto-Groane</option>
+<option>Ceriano Laghetto-Solaro</option>
+<option>Cernusco</option>
+<option>Cernusco-Merate</option>
+<option>Certosa</option>
+<option>Certosa di Pavia</option>
+<option>Cesano Boscone</option>
+<option>Cesano Maderno</option>
+<option>Cesano Maderno-Groane</option>
+<option>Cesate</option>
+<option>Chiasso</option>
+<option>Cimiano</option>
+<option>Civate</option>
+<option>Cologno Centro</option>
+<option>Cologno Nord</option>
+<option>Cologno Sud</option>
+<option>Comasina</option>
+<option>Como San Giovanni</option>
+<option>Conciliazione</option>
+<option>Corbetta S. Stefano</option>
+<option>Cordusio</option>
+<option>Cormano-Cusano</option>
+<option>Corsico</option>
+<option>Corvetto</option>
+<option>Costa Masnaga</option>
+<option>Crescenzago</option>
+<option>Crocetta</option>
+<option>Cucciago</option>
+<option>Dateo</option>
+<option>De Angeli</option>
+<option>Dergano</option>
+<option>Desio</option>
+<option>Domodossola</option>
+<option>Domodossola FNM</option>
+<option>Duomo</option>
+<option>Famagosta</option>
+<option>Forlanini</option>
+<option>Gaggiano</option>
+<option>Gallarate</option>
+<option>Gambara</option>
+<option>Garbagnate - Groane</option>
+<option>Garbagnate Milanese</option>
+<option>Garbagnate Parco delle Groane</option>
+<option>Gazzada</option>
+<option>Gerusalemme</option>
+<option>Gessate</option>
+<option>Gioia</option>
+<option>Gorgonzola</option>
+<option>Gorla</option>
+<option>Greco Pirelli</option>
+<option>Inganni</option>
+<option>Isola</option>
+<option>Istria</option>
+<option>Lambrate</option>
+<option>Lampugnano</option>
+<option>Lancetti</option>
+<option>Lanza</option>
+<option>Lecco</option>
+<option>Lecco Maggianico</option>
+<option>Legnano</option>
+<option>Lima</option>
+<option>Lissone</option>
+<option>Locate Triulzi</option>
+<option>Lodi</option>
+<option>Lodi T.I.B.B. (P.ta Romana FS)</option>
+<option>Loreto</option>
+<option>Lotto</option>
+<option>Macherio-Canonica</option>
+<option>Maciachini</option>
+<option>Magenta</option>
+<option>Marche</option>
+<option>Mariano Comense</option>
+<option>Meda</option>
+<option>Melegnano</option>
+<option>Melzo</option>
+<option>Milano Centrale</option>
+<option>Missori</option>
+<option>Molino Dorino</option>
+<option>Molteno</option>
+<option>Montenapoleone</option>
+<option>Monumentale</option>
+<option>Monza</option>
+<option>Monza Sobborghi</option>
+<option>Moscova</option>
+<option>Novara</option>
+<option>Novate Milanese</option>
+<option>Oggiono</option>
+<option>Olgiate</option>
+<option>Osnago</option>
+<option>Paderno Dugnano</option>
+<option>Pagano</option>
+<option>Palazzolo Milanese</option>
+<option>Palestro</option>
+<option>Parabiago</option>
+<option>Pasteur</option>
+<option>Pavia</option>
+<option>Pero</option>
+<option>Piazza Abbiategrasso</option>
+<option>Pieve Emanuele</option>
+<option>Piola</option>
+<option>Pioltello</option>
+<option>Ponale</option>
+<option>Porta Garibaldi</option>
+<option>Porta Genova</option>
+<option>Porta Romana</option>
+<option>Porta Venezia</option>
+<option>Porta Vittoria</option>
+<option>Portello</option>
+<option>Porto di Mare</option>
+<option>Pozzuolo Martesana</option>
+<option>Precotto</option>
+<option>Pregnana Milanese</option>
+<option>Primaticcio</option>
+<option>QT8</option>
+<option>Quarto Oggiaro</option>
+<option>Renate-Veduggio</option>
+<option>Repubblica</option>
+<option>Rho</option>
+<option>Rho Fiera</option>
+<option>Rho FieraMilano</option>
+<option>Rogoredo</option>
+<option>Romolo</option>
+<option>Rovereto</option>
+<option>Sala al Barro-Galbiate</option>
+<option>San Babila</option>
+<option>San Cristoforo</option>
+<option>San Donato</option>
+<option>San Leonardo</option>
+<option>San Siro Ippodromo</option>
+<option>San Siro Stadio</option>
+<option>Sant\'Agostino</option>
+<option>Sant\'Ambrogio</option>
+<option>Saronno</option>
+<option>Saronno Sud</option>
+<option>S. Donato Milanese</option>
+<option>Segesta</option>
+<option>Segrate</option>
+<option>Seregno</option>
+<option>Sesto FS (I Maggio)</option>
+<option>Sesto Marelli</option>
+<option>Sesto Rondò</option>
+<option>Seveso</option>
+<option>Seveso Baruccana</option>
+<option>S. Giuliano Milanese</option>
+<option>Sondrio</option>
+<option>S. Zenone al Lambro</option>
+<option>Tavazzano</option>
+<option>Trecate</option>
+<option>Trecella</option>
+<option>Tre torri</option>
+<option>Treviglio</option>
+<option>Trezzano sul Naviglio</option>
+<option>Triuggio-Ponte Albiate</option>
+<option>Turati</option>
+<option>Turro</option>
+<option>Udine</option>
+<option>Uruguay</option>
+<option>Valmadrera</option>
+<option>Vanzago</option>
+<option>Varedo</option>
+<option>Varese</option>
+<option>Venezia</option>
+<option>Vignate</option>
+<option>Villa Fiorita</option>
+<option>Villamaggiore</option>
+<option>Villapizzone</option>
+<option>Villa Pompea</option>
+<option>Villa Raverio</option>
+<option>Villasanta</option>
+<option>Villa S. Giovanni</option>
+<option>Vimodrone</option>
+<option>Vittuone</option>
+<option>Wagner</option>
+<option>Zara</option>
+  </select>
+</div>
+<!--    <input ng-model="to"    placeholder="stazione di arrivo" type="text" /> -->
+    <input type="submit" class="btn btn-primary" id="submit" value="Cerca percorso" />
   </form>
   <div>
-    <ul ng-if="result.path > 0">
-      <li ng-repeat="path in result.path">
+    <ul> <!--  ng-if="result.path > 0"> -->
+      <li ng-repeat="path in result['path']"><p>Percorso:</p>
 	<ul>
           <li ng-repeat="p in path[1]">
-            [[p]]
+            [[ p ]]
           </li>
 	</ul>
       </li>
