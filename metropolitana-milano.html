@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Mobilità Milano
-subtitle: Ricerca percorsi tra linee metropolitane di Atm e suburbane di Trenord
+subtitle: Ricerca percorsi a Milano sulle linee metropolitane di Atm e suburbane di Trenord
 
 og_title:  Mezzi di trasporto milano metro M1 M2 M3 M5 e linee suburbane S1 S2 S3 S4 S5 S6 S7 S8 S9 S10 S11 S13
 og_description: cerca percorsi tra stazioni del metro a Milano e linee trenord
@@ -487,9 +487,7 @@ og_type: website
     <ul> <!--  ng-if="result.path > 0"> -->
       <li ng-repeat="path in result['path']"><p>Percorso:</p>
 	<ul>
-          <li ng-repeat="p in path[1]">
-            [[ p ]]
-          </li>
+          <li ng-repeat="p in path[1]">[[ p.join(", ") ]]</li>
 	</ul>
       </li>
     </ul>
