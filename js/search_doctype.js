@@ -19,5 +19,5 @@ app.controller('planetController', function($scope, $http, $location) {
             ga('send', 'event', 'search', idx + '/' + typ, q);
          });
     };
-    //$scope.searchV($scope.idx, $scope.typ, $scope.q);
+    $scope.searchV($scope.idx, $scope.typ, $scope.q);
 });

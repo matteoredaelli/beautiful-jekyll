@@ -1,0 +1,58 @@
+---
+layout: page
+title: Coniugazione verbi
+subtitle: Coniugazione di tutti i modi e tempi dei verbi italiani - regolari e irregolari
+
+og_title:  coniugazione verbi
+og_description: coniugazione verbi - indicativi, congiuntivi, condizionali, participi
+og_type: website
+---
+
+<script src="/js/search_doctype.js"></script>
+
+<div ng-app="myApp" ng-controller="planetController">
+  <form ng-submit="searchV('grafo', 'verbo', 'name:' + q)">
+    <input ng-model="q" placeholder="verbo" type="text" />
+  </form>
+  <div>
+   
+    <div ng-if="hits.length > 0">
+      <h1>Verbo  [[ hits[0]["_source"]["verbo"] ]]</h1>
+      <h2>Indicativo</h2>
+	  <ul>
+            <li>Presente: [[ hits[0]["_source"]["coniugazioni"]["Indicativo presente"]["coniugazione"].join(", ") ]]</li>
+            <li>Imperfetto: [[ hits[0]["_source"]["coniugazioni"]["Indicativo imperfetto"]["coniugazione"].join(", ") ]]</li>
+            <li>Passato remoto: [[ hits[0]["_source"]["coniugazioni"]["Indicativo passato remoto"]["coniugazione"].join(", ") ]]</li>
+            <li>Trapassato remoto: [[ hits[0]["_source"]["coniugazioni"]["Indicativo trapassato remoto"]["coniugazione"].join(", ") ]]</li>
+            <li>Futuro semplice: [[ hits[0]["_source"]["coniugazioni"]["Indicativo futuro semplice"]["coniugazione"].join(", ") ]]</li>
+            <li>Futuro anteriore: [[ hits[0]["_source"]["coniugazioni"]["Indicativo futuro anteriore"]["coniugazione"].join(", ") ]]</li>
+	  </ul>
+          <h2>Congiuntivo</h2>
+	  <ul>
+            <li>Presente: [[ hits[0]["_source"]["coniugazioni"]["Congiuntivo presente"]["coniugazione"].join(", ") ]]</li>
+            <li>Passato: [[ hits[0]["_source"]["coniugazioni"]["Congiuntivo passato"]["coniugazione"].join(", ") ]]</li>
+            <li>Imperfetto: [[ hits[0]["_source"]["coniugazioni"]["Congiuntivo imperfetto"]["coniugazione"].join(", ") ]]</li>
+            <li>Trapassato: [[ hits[0]["_source"]["coniugazioni"]["Congiuntivo trapassato"]["coniugazione"].join(", ") ]]</li>
+          </ul>
+          <h2>Condizionale</h2>
+	  <ul>
+            <li>Presente: [[ hits[0]["_source"]["coniugazioni"]["Condizionale presente"]["coniugazione"].join(", ") ]]</li>
+            <li>Passato: [[ hits[0]["_source"]["coniugazioni"]["Condizionale passato"]["coniugazione"].join(", ") ]]</li>
+          </ul>
+          <h2>Imperativo</h2>
+	  <ul>
+            <li>Presente: [[ hits[0]["_source"]["coniugazioni"]["Imperativo"]["coniugazione"].join(", ") ]]</li>
+          </ul>
+          <h2>Gerundio</h2>
+	  <ul>
+            <li>Presente: [[ hits[0]["_source"]["coniugazioni"]["Gerundio"]["coniugazione"].join(", ") ]]</li>
+            <li>Passato: [[ hits[0]["_source"]["coniugazioni"]["Gerundio passato"]["coniugazione"].join(", ") ]]</li>
+          </ul>
+          <h2>Infinito</h2>
+	  <ul>
+            <li>Presente: [[ hits[0]["_source"]["coniugazioni"]["Infinito"]["coniugazione"].join(", ") ]]</li>
+            <li>Passato: [[ hits[0]["_source"]["coniugazioni"]["Infinito passato"]["coniugazione"].join(", ") ]]</li>
+          </ul>
+    </div>
+  </div>
+</div>
